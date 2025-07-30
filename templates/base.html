@@ -1,0 +1,21 @@
+{% load menu_tags %}
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Меню тест</title>
+    <link rel="stylesheet" href="{% static 'menu.css' %}">
+</head>
+<body>
+    <h1>Пример меню</h1>
+    {% draw_menu 'main_menu' %}
+
+    <div class="content">
+        {% block content %}
+            Контент.
+        {% endblock %}
+    </div>
+</body>
+</html>
